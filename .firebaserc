@@ -1,8 +1,6 @@
 {
   "projects": {
     "default": "oluwafemi-vi-lendsqr-fe-test"
-  },
-  "hosting": {
-    "public": "build"
   }
+  
 }
