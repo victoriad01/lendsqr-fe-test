@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "public": "build/my-lendsqr-fe-test",
+    "public": "build",
     "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
     "rewrites": [
       {
