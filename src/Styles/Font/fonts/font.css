@@ -1,0 +1,24 @@
+@font-face {
+  font-family: 'Avenir Next';
+  src: url('./AvenirNextLTPro-Bold.otf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Avenir Next Light';
+  src: url('./AvenirNextLTPro-Regular.otf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Work San Medium';
+  src: url('./WorkSans-Medium.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Work San Light';
+  src: url('./WorkSans-Light.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'SF Compact Text';
+  src: url('./FontsFree-Net-SFCompactText-Regular.ttf') format('truetype');
+}

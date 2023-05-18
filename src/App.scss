@@ -1,0 +1,63 @@
+// Defining my mixins for responsiveness
+@mixin mobile {
+  @media (max-width: 600px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: 601px) and (max-width: 769px) {
+    @content;
+  }
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.sidebarandpage {
+  display: flex;
+  flex-direction: row;
+  max-width: 100%;
+  /* flex-grow: 1; */
+}
+
+.sidebar {
+  background-color: white;
+  width: 22%;
+
+  @include mobile {
+    width: 0%;
+  }
+
+  @include tablet {
+    width: 0%;
+  }
+}
+
+.page {
+  width: 78%;
+  background-color: #e5e5e5;
+  @include mobile {
+    width: 100%;
+  }
+
+  @include tablet {
+    width: 100%;
+  }
+}

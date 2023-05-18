@@ -1,0 +1,307 @@
+@import '../Variable/Variables.scss';
+
+// Defining my mixins for responsiveness
+@mixin mobile {
+  @media (max-width: 600px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: 601px) and (max-width: 769px) {
+    @content;
+  }
+}
+
+.detail-container {
+  max-width: 100%;
+  padding: 65px 60px;
+  font-family: $font-family-3;
+  @include mobile {
+    padding: 25px 6px;
+  }
+
+  @include tablet {
+    padding: 25px 20px;
+  }
+  .back {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+    @include mobile {
+      // display: block;
+      // height: auto;
+    }
+
+    @include tablet {
+      // padding: 8px;
+    }
+    p {
+      font-size: $font-size-light;
+      font-family: $font-family-3;
+      color: $primary-color-gray;
+    }
+  }
+}
+
+.second-block {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 6px;
+  width: 100%;
+  @include mobile {
+    display: block;
+    // justify-content: space-between;
+    // align-items: center;
+    gap: 6px;
+    width: 100%;
+  }
+
+  @include tablet {
+    // padding: 8px;
+  }
+  .user-detail {
+    color: $primary-color-blue;
+    font-size: 21px;
+    font-weight: 500;
+  }
+}
+
+.buttons-area {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  font-size: $font-size-medium;
+  @include mobile {
+    // display: block;
+    // height: auto;
+  }
+
+  @include tablet {
+    // padding: 8px;
+  }
+  .button-red {
+    color: red;
+    border-radius: 8px;
+    border: 1px solid red;
+    font-size: 21px;
+    font-weight: 500;
+    padding: 12px 16px;
+    background-color: transparent;
+    font-size: $font-size-medium;
+    cursor: pointer;
+  }
+  @include mobile {
+    font-size: 14px;
+    font-weight: 500;
+    padding: 6px 8px;
+  }
+
+  @include tablet {
+    // padding: 8px;
+  }
+
+  .button-green {
+    color: $primary-color-green;
+    border-radius: 8px;
+    border: 1px solid $primary-color-green;
+    font-size: 21px;
+    font-weight: 500;
+    padding: 12px 16px;
+    background-color: transparent;
+    font-size: $font-size-medium;
+    cursor: pointer;
+  }
+  @include mobile {
+    // display: block;
+    // height: auto;
+  }
+
+  @include tablet {
+    // padding: 8px;
+  }
+}
+
+.third-block {
+  border-radius: 4px;
+  border: $div-border;
+  margin-top: 20px;
+  background-color: white;
+  color: $primary-color-blue;
+  box-shadow: $nav-box-shadow;
+  max-width: 100%;
+  font-size: 21px;
+  font-weight: 500;
+  padding: 24px 24px 0px 24px;
+  height: 175px;
+
+  @include mobile {
+    height: auto;
+  }
+
+  @include tablet {
+    // margin-top: 0px;
+  }
+  .flex-the-items {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 16px;
+    @include mobile {
+      display: block;
+    }
+
+    @include tablet {
+      // margin-top: 0px;
+    }
+  }
+  .profile {
+    display: flex;
+    gap: 16px;
+  }
+
+  .p-name {
+    color: $primary-color-blue;
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 25.81px;
+    margin-bottom: 0;
+  }
+  .p-code {
+    color: $primary-color-gray;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16.42px;
+    margin-top: 6px;
+  }
+  .Tier-container {
+    border-left: 1px solid rgba(84, 95, 125, 0.2);
+    border-right: 1px solid rgba(84, 95, 125, 0.2);
+    padding: 0px 30px;
+  }
+  .tier-users {
+    margin-bottom: 6px;
+    font-size: $font-size-medium;
+    font-weight: 500;
+    color: $primary-color-gray;
+  }
+
+  .toggle-items {
+    // position: fixed;
+    // top: 380px;
+    display: flex;
+    justify-content: space-between;
+    max-width: 100%;
+    align-items: center;
+    gap: 30px;
+    font-size: 16px;
+    margin-top: 12px;
+    @include mobile {
+      overflow-x: scroll;
+
+      margin-top: 12px;
+      gap: 10px;
+      font-size: 10px;
+    }
+
+    @include tablet {
+      margin-top: 24px;
+      gap: 10px;
+      font-size: 10px;
+    }
+  }
+}
+
+.item-green {
+  border-bottom: 2px solid $primary-color-green;
+  color: $primary-color-green;
+  padding: 12px 16px;
+  font-size: 400;
+  cursor: pointer;
+  @include mobile {
+    // display: block;
+    // height: auto;
+  }
+
+  @include tablet {
+    // padding: 12px 2px;
+  }
+}
+
+.item-gray {
+  color: $primary-color-gray;
+  padding: 12px 16px;
+  font-weight: 400;
+  font-family: $font-family-5;
+  cursor: pointer;
+}
+
+.forth-block {
+  border-radius: 4px;
+  border: $div-border;
+  margin-top: 20px;
+  background-color: white;
+  color: $primary-color-blue;
+  box-shadow: $nav-box-shadow;
+  max-width: 100%;
+  font-size: 21px;
+  font-weight: 500;
+  padding: 12px 24px 0px 24px;
+  height: auto;
+
+  @include mobile {
+    // display: block;
+    // height: auto;
+  }
+
+  @include tablet {
+    // padding: 8px;
+  }
+  .personal-info {
+    font-family: $font-family-3;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 18.77px;
+    margin-top: 24px;
+  }
+  .wrap-container {
+    max-width: 100%;
+    display: flex;
+
+    flex-wrap: wrap;
+    gap: 80px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+
+    border-bottom: 1px solid rgba(33, 63, 125, 0.1);
+
+    // .wrap-items {
+    //   margin-right: 60px;
+    // }
+
+    .title {
+      color: $primary-color-gray;
+      font-size: $font-size-light;
+      font-weight: 400;
+      line-height: 14.08px;
+      text-transform: uppercase;
+    }
+
+    .title-detail {
+      color: $primary-color-gray;
+      font-family: $font-family-3;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 18.77px;
+      margin-top: 0;
+    }
+  }
+
+  .button-space {
+    margin-bottom: 40px;
+  }
+}

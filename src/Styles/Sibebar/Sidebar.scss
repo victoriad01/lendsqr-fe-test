@@ -1,0 +1,144 @@
+@import '../Variable/Variables.scss';
+
+// Defining my mixins for responsiveness
+@mixin mobile {
+  @media (max-width: 600px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: 601px) and (max-width: 769px) {
+    @content;
+  }
+}
+
+.main-container-sidebar {
+  font-family: $font-family-3;
+
+  height: auto;
+  padding: 60px 0px 10px 0px;
+  display: block;
+
+  overflow-y: auto;
+  background-color: white;
+
+  @include mobile {
+    display: none;
+  }
+
+  @include tablet {
+    display: none;
+  }
+}
+
+.company-section {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 40px;
+  margin-left: 40px;
+}
+
+.company-dashboard {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  margin-bottom: 40px;
+  margin-left: 40px;
+  font-family: $font-family-4;
+  font-weight: 400;
+}
+
+.customers {
+  font-size: $font-size-light;
+}
+
+.customer {
+  margin-left: 40px;
+}
+
+.customer-div {
+  padding-left: 40px;
+  display: flex;
+  gap: 14px;
+  font-size: 16px;
+}
+
+.div-scroll {
+  overflow-y: scroll;
+}
+
+.customers-map {
+  display: flex;
+  gap: 14px;
+  font-size: 16px;
+}
+
+.customers-map-clicked {
+  display: flex;
+  gap: 14px;
+  font-size: 16px;
+  font-weight: 700;
+  background-color: $background-sidebar;
+  border-left: 4px solid $primary-color-green;
+  text-decoration: none;
+}
+
+.customers-word {
+  cursor: pointer;
+  font-family: $font-family-4;
+  font-weight: 400;
+  // text-decoration: none;
+  text-decoration: inherit;
+}
+
+.section-title {
+  padding-top: 20px;
+}
+
+.organisation {
+  font-family: $font-family-3;
+  height: 900px;
+
+  display: block;
+  overflow-y: scroll;
+  background-color: white;
+
+  @include mobile {
+    // display: block;
+    // height: auto;
+  }
+
+  @include tablet {
+    // padding: 8px;
+  }
+}
+
+.last-sidebar-section {
+  border-top: $form-border;
+  font-size: 16px;
+  margin-top: 40px;
+  @include mobile {
+  }
+  @include tablet {
+  }
+}
+
+.logout-pointer {
+  cursor: pointer;
+  @include mobile {
+  }
+  @include tablet {
+  }
+}
+
+.version {
+  font-size: $font-size-light;
+  margin-top: 30px;
+  @include mobile {
+  }
+
+  @include tablet {
+  }
+}

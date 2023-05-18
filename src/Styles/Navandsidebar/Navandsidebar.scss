@@ -1,0 +1,25 @@
+@import '../Variable/Variables.scss';
+
+// Defining my mixins for responsiveness
+@mixin mobile {
+  @media (max-width: 600px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: 601px) and (max-width: 769px) {
+    @content;
+  }
+}
+
+.navbar-sticky {
+  @include mobile {
+    // display: block;
+    // height: auto;
+  }
+
+  @include tablet {
+    // padding: 8px;
+  }
+}

@@ -1,0 +1,231 @@
+@import '../Variable/Variables.scss';
+
+// Defining my mixins for responsiveness
+@mixin mobile {
+  @media (max-width: 600px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: 601px) and (max-width: 769px) {
+    @content;
+  }
+}
+
+// @mixin desktop {
+//   @media (min-width: 770px) {
+//     @content;
+//   }
+// }
+
+
+
+.main-container {
+  background-color: white;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @include mobile {
+    display: block;
+    height: auto;
+  }
+
+  @include tablet {
+    // padding: 8px;
+  }
+}
+
+.container1 {
+  width: 50%;
+  height: 100vh;
+
+  @include mobile {
+    height: auto;
+  }
+
+  @include tablet {
+    // padding: 8px;
+  }
+}
+
+.logo {
+  margin-left: 97px;
+  margin-top: 106px;
+  cursor: pointer;
+
+  @include mobile {
+    margin: 40px 20px;
+  }
+
+  @include tablet {
+    // padding: 8px;
+  }
+}
+
+.image-pablo {
+  padding-left: 37px;
+  padding-top: 90px;
+  width: 600px;
+  height: 280px;
+  @include mobile {
+    display: none;
+  }
+
+  @include tablet {
+    // padding: 8px;
+  }
+}
+
+.container2 {
+  background-color: white;
+  width: 50%;
+  height: 100vh;
+  box-shadow: -10px 0px 30px rgba(0, 0, 0, 0.04);
+
+  @include mobile {
+    width: 100%;
+  }
+
+  @include tablet {
+    // padding: 8px;
+  }
+}
+
+.container2-body {
+  margin-top: 160px;
+  margin-left: 100px;
+  @include mobile {
+    margin: 20px;
+    text-align: center;
+    margin-top: 160px;
+  }
+
+  @include tablet {
+    margin-top: 140px;
+    margin-left: 65px;
+  }
+}
+
+.welcome-text {
+  color: $primary-color-blue;
+  font-family: $font-family-1;
+  size: 120px;
+  line-height: 24.64px;
+
+  @include mobile {
+    margin-top: 20px;
+  }
+
+  @include tablet {
+    // padding: 8px;
+  }
+}
+
+.text {
+  font-family: $font-family-2;
+  color: $primary-color-blue;
+  margin-bottom: 60px;
+
+  @include mobile {
+  }
+
+  @include tablet {
+    // padding: 8px;
+  }
+}
+
+.form-box {
+  font-family: $font-family-2;
+  color: $primary-color-blue;
+  font-size: $font-size-medium;
+
+  @include mobile {
+  }
+
+  @include tablet {
+  }
+}
+
+.form {
+  font-family: $font-family-2;
+  color: $primary-color-gray;
+  margin-right: 157px;
+  width: 100%;
+
+  @include mobile {
+  }
+
+  @include tablet {
+  }
+}
+
+.form-item {
+  font-family: $font-family-2;
+  color: $primary-color-gray;
+  width: 70%;
+  padding: $form-padding;
+  margin-bottom: 20px;
+  border: none;
+  border: $form-border;
+
+  @include mobile {
+  }
+
+  @include tablet {
+  }
+}
+
+.form-item-password {
+  font-family: $font-family-2;
+  color: $primary-color-gray;
+  width: 70%;
+  padding: $form-padding;
+  margin-bottom: 8px;
+  border: none;
+  border: $form-border;
+
+  @include mobile {
+  }
+
+  @include tablet {
+  }
+}
+
+.forgot-password {
+  color: $primary-color-green;
+  font-size: $font-size-light;
+
+  @include mobile {
+    text-align: left;
+    margin-left: 30px;
+  }
+
+  @include tablet {
+  }
+}
+
+.form-item-button {
+  font-family: $font-family-2;
+  font-size: $font-size-medium;
+  background-color: $primary-color-green;
+  color: white;
+  width: 75%;
+  padding: $form-padding;
+  margin-bottom: 18px;
+  margin-top: 14px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+
+  @include mobile {
+    width: 80%;
+  }
+
+  @include tablet {
+    width: 80%;
+  }
+}
