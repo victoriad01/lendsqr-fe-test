@@ -61,12 +61,12 @@ const Userdetails = () => {
     null
   )
 
-  const [loading, setLoading] = useState(false)
-  const [isError, setIsError] = useState(false)
+  // const [loading, setLoading] = useState(false)
+  // const [isError, setIsError] = useState(false)
 
   const response = async () => {
     try {
-      setLoading(true)
+      // setLoading(true)
       const response = await axios.get(
         'https://6270020422c706a0ae70b72c.mockapi.io/lendsqr/api/v1/users/10'
       )
@@ -77,8 +77,8 @@ const Userdetails = () => {
       localStorage.setItem('userDetails', json)
       setFetchedData(data)
     } catch (error) {
-      setLoading(false)
-      setIsError(true)
+      // setLoading(false)
+      // setIsError(true)
       console.log(error)
     }
   }
