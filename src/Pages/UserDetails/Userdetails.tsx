@@ -13,15 +13,44 @@ export interface UserdetailsInterface {
   accountBalance: string
   accountNumber: string
   createdAt: string
-  education: object
+  education: {
+    level: string
+    employmentStatus: string
+    sector: string
+    duration: string
+    officeEmail: string
+    monthlyIncome: [string, string]
+    loanRepayment: string
+  }
   email: string
-  guarantor: object
+  guarantor: {
+    firstName: string
+    lastName: string
+    phoneNumber: string
+    gender: string
+    address: string
+    email: string
+    relationship: string
+  }
   id: string
   lastActiveDate: string
   orgName: string
   phoneNumber: string
-  profile: object
-  socials: object
+  profile: {
+    firstName: string
+    lastName: string
+    phoneNumber: string
+    avatar: string
+    gender: string
+    bvn: string
+    address: string
+    currency: string
+  }
+  socials: {
+    facebook: string
+    instagram: string
+    twitter: string
+  }
   userName: string
 }
 
@@ -42,7 +71,6 @@ const Userdetails = () => {
         'https://6270020422c706a0ae70b72c.mockapi.io/lendsqr/api/v1/users/10'
       )
       const data = response?.data
-      console.log(data)
       // Convert array of objects to a JSON string
       const json = JSON.stringify(data)
       // Save the JSON string to local storage
@@ -58,8 +86,6 @@ const Userdetails = () => {
   useEffect(() => {
     response()
   }, [])
-
-  console.log(fetchedData)
 
   const [toggle, setToggle] = useState({
     general: true,

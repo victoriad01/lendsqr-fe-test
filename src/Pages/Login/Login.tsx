@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { MouseEvent } from 'react'
 
 import '../../Styles/Login/Login.scss'
 
@@ -9,14 +9,15 @@ import { useNavigate } from 'react-router-dom'
 function Login() {
   const navigate = useNavigate()
 
-  const [email, setEmail] = useState('')
-  const [password, setPassword] = useState('')
-  const [error, setError] = useState('')
+  // const [email, setEmail] = useState('')
+  // const [password, setPassword] = useState('')
+  // const [error, setError] = useState('')
 
   const handleClick = (event: MouseEvent) => {
     event.preventDefault()
     navigate('/users')
   }
+
   return (
     <div className='main-container'>
       <div className='container1'>

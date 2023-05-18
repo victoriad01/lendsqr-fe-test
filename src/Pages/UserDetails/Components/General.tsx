@@ -1,10 +1,11 @@
 import { UserdetailsInterface } from '../Userdetails'
 
 interface Fetched {
-  fetchedData: UserdetailsInterface
+  fetchedData: UserdetailsInterface | null
 }
 
 export const GeneralComponent = ({ fetchedData }: Fetched) => {
+  console.log(fetchedData)
   return (
     <div className='forth-block'>
       <div>
