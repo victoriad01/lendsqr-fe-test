@@ -137,7 +137,7 @@
   font-size: 21px;
   font-weight: 500;
   padding: 24px 24px 0px 24px;
-  height: 175px;
+  height: 177px;
 
   @include mobile {
     height: auto;
@@ -146,6 +146,7 @@
   @include tablet {
     // margin-top: 0px;
   }
+
   .flex-the-items {
     display: flex;
     justify-content: flex-start;
@@ -159,9 +160,17 @@
       // margin-top: 0px;
     }
   }
+
   .profile {
     display: flex;
+    justify-content: center;
+    align-items: center;
     gap: 16px;
+  }
+
+  .dp-image {
+    height: 100px;
+    width: 100px;
   }
 
   .p-name {
@@ -199,7 +208,7 @@
     align-items: center;
     gap: 30px;
     font-size: 16px;
-    margin-top: 12px;
+    margin-top: 18px;
     @include mobile {
       overflow-x: scroll;
 

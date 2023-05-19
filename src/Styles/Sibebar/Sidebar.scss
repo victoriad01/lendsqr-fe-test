@@ -15,20 +15,86 @@
 
 .main-container-sidebar {
   font-family: $font-family-3;
-
   height: auto;
   padding: 60px 0px 10px 0px;
   display: block;
-
   overflow-y: auto;
   background-color: white;
 
   @include mobile {
     display: none;
+    position: absolute;
+    top: 160px;
+    width: 95%;
+    padding: 20px 0px 10px 0px;
   }
 
   @include tablet {
     display: none;
+    position: absolute;
+    top: 112px;
+    width: 45%;
+    padding: 20px 0px 10px 0px;
+  }
+}
+
+.main-container-sidebar2 {
+  font-family: $font-family-3;
+  height: auto;
+  padding: 60px 0px 10px 0px;
+  display: block;
+  overflow-y: auto;
+  background-color: white;
+
+  @include mobile {
+    position: absolute;
+    top: 160px;
+    width: 95%;
+    padding: 20px 0px 10px 0px;
+  }
+
+  @include tablet {
+    position: absolute;
+    top: 112px;
+    width: 45%;
+    padding: 20px 0px 10px 0px;
+  }
+}
+
+.toggle-left {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  font-family: $font-family-3;
+  padding-left: 15px;
+  padding-right: 15px;
+  @include mobile {
+    display: flex;
+  }
+
+  @include tablet {
+    display: flex;
+  }
+}
+
+.toggle-close {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  font-family: $font-family-3;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  color: $primary-color-green;
+  // padding: 60px 0px 10px 0px;
+  background-color: rgba(57, 205, 204, 12%);
+
+  @include mobile {
+    display: flex;
+  }
+
+  @include tablet {
+    display: flex;
   }
 }
 

@@ -1,9 +1,17 @@
+import { toggleFalse } from '../../../Slice/SidebarToggleSlice'
+import { useAppDispatch, useAppSelector } from '../../../hooks'
 import '../../Styles/Sibebar/Sidebar.scss'
 import CompanyIcon from '../../assets/briefcase 1.svg'
 import HomeIcon from '../../assets/home 1.svg'
 import SidebarItem from './Components/Customers'
 
 const Sidebar = () => {
+  const stateCheck = useAppSelector((state) => state.toggle.value)
+
+  console.log(stateCheck)
+
+  const dispatch = useAppDispatch()
+
   const companies = [
     { name: 'Switch Organization', value: '0' },
     { name: 'VI-Media', value: '1' },
@@ -12,7 +20,18 @@ const Sidebar = () => {
 
   return (
     <aside>
-      <div className='main-container-sidebar no-scrollbar'>
+      <div
+        className={
+          stateCheck
+            ? `main-container-sidebar2 no-scrollbar`
+            : `main-container-sidebar no-scrollbar`
+        }
+      >
+        <div className='toggle-left'>
+          <p className='toggle-close' onClick={() => dispatch(toggleFalse())}>
+            X
+          </p>
+        </div>
         <div className='company-section'>
           <img src={CompanyIcon} alt="Company's icon" />
           <select className='select-box'>

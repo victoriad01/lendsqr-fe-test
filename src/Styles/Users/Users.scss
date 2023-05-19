@@ -498,6 +498,7 @@
   margin-bottom: 16px;
   gap: 6px;
   @include mobile {
+    display: none;
   }
 
   @include tablet {

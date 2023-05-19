@@ -180,12 +180,14 @@ const Userdetails = () => {
       <div className='third-block'>
         <div className='flex-the-items'>
           <div className='profile'>
-            <div>
-              <img src={ProfileIcon} alt='dp-icon' className='dp-image' />
-            </div>
+            <img
+              src={fetchedData?.profile.avatar || ProfileIcon}
+              alt='dp-icon'
+              className='dp-image'
+            />
+
             <div className='profile-name-area'>
               <p className='p-name'>{fetchedData?.profile?.firstName}</p>
-
               <p className='p-code'>{fetchedData?.accountNumber}</p>
             </div>
           </div>

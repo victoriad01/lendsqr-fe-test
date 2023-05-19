@@ -137,6 +137,7 @@
 
   @include mobile {
     justify-content: space-between;
+    gap: 24px;
   }
 
   @include tablet {
@@ -195,4 +196,15 @@
 
 .select {
   padding: 12px;
+}
+
+.menu-icons {
+  display: none;
+  @include mobile {
+    display: flex;
+  }
+
+  @include tablet {
+    display: flex;
+  }
 }

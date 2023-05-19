@@ -5,6 +5,11 @@ import SearchIcon from '../../assets/search_icon.svg'
 import Notification_Icon from '../../assets/Notification.svg'
 
 import Dp_Icon from '../../assets/image 4.png'
+import MenuIcon from '../../assets/menu.svg'
+// import { useSelector } from 'react-redux'
+
+import { useAppSelector, useAppDispatch } from '../../../hooks'
+import { toggleTrue } from '../../../Slice/SidebarToggleSlice'
 
 const users = [
   { name: 'Victor', value: '0' },
@@ -13,6 +18,10 @@ const users = [
 ]
 
 const Navbar = () => {
+  const stateCheck = useAppSelector((state) => state.toggle.value)
+
+  const dispatch = useAppDispatch()
+
   return (
     <div className='main-container-navbar'>
       <div className='nav-left'>
@@ -38,6 +47,18 @@ const Navbar = () => {
               </option>
             ))}
           </select>
+        </div>
+        <div>
+          <img
+            src={MenuIcon}
+            alt='menu icon'
+            className='menu-icons'
+            onClick={() => {
+              dispatch(toggleTrue())
+              console.log(stateCheck)
+              console.log('Clicked')
+            }}
+          />
         </div>
       </div>
     </div>
