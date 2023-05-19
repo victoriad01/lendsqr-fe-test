@@ -100,6 +100,7 @@
   font-size: 24px;
   margin-top: 8px;
   margin-bottom: 16px;
+  font-size: 600;
 
   @include mobile {
     // display: block;
@@ -458,5 +459,87 @@
 
   @include tablet {
     // padding: 8px;
+  }
+}
+
+.paginate-session {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: $primary-color-gray;
+  max-width: 100%;
+  // padding: 11px 20px;
+  font-weight: 600;
+  font-size: $font-size-medium;
+  border-radius: 8px;
+  margin-bottom: 16px;
+  @include mobile {
+    overflow-x: scroll;
+  }
+
+  @include tablet {
+    overflow-x: scroll;
+  }
+  .count {
+    background-color: rgba(57, 205, 204, 6%);
+    padding: 6px 12px;
+  }
+}
+
+.showing {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  color: $primary-color-gray;
+
+  font-weight: 600;
+  font-size: $font-size-medium;
+  border-radius: 8px;
+  margin-bottom: 16px;
+  gap: 6px;
+  @include mobile {
+  }
+
+  @include tablet {
+  }
+}
+
+.paginate-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 35%;
+  color: rgba(86, 84, 125, 75%);
+  padding: 11px 30px;
+  font-weight: 600;
+  font-size: $font-size-medium;
+  border-radius: 8px;
+  margin-bottom: 16px;
+  list-style: none;
+  gap: 16px;
+  cursor: pointer;
+
+  @include mobile {
+    // display: block;
+    // height: auto;
+  }
+
+  @include tablet {
+    // padding: 8px;
+  }
+  .pre-btn {
+    // padding: 6px 8px;
+    background-color: rgba(57, 205, 204, 6%);
+    padding: 6px 12px;
+    cursor: pointer;
+  }
+  .next-btn {
+    background-color: rgba(57, 205, 204, 6%);
+    padding: 6px 12px;
+    cursor: pointer;
+  }
+  .active {
+    color: $primary-color-gray;
+    cursor: pointer;
   }
 }
