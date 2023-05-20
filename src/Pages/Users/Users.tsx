@@ -55,11 +55,11 @@ function Users() {
 
   return (
     <div className='user-main-container'>
-      <p className='users'>Users</p>
-      <div>
+      <p className='users' data-testid='users'>Users</p>
+      <div data-testId='cards'>
         <Cards fetchedData={fetchedData} />
       </div>
-      <div>
+      <div data-testId='table'>
         <Table fetchedData={displayUsers} />
         {displayUsers.length > 0 ? (
           <div className='paginate-session'>

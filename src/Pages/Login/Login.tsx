@@ -1,4 +1,4 @@
-import { MouseEvent } from 'react'
+import { useState, MouseEvent } from 'react'
 
 import '../../Styles/Login/Login.scss'
 
@@ -9,13 +9,19 @@ import { useNavigate } from 'react-router-dom'
 function Login() {
   const navigate = useNavigate()
 
-  // const [email, setEmail] = useState('')
-  // const [password, setPassword] = useState('')
-  // const [error, setError] = useState('')
+  const [email, setEmail] = useState('')
+  const [password, setPassword] = useState('')
+  const [error, setError] = useState(false)
 
   const handleClick = (event: MouseEvent) => {
     event.preventDefault()
-    navigate('/users')
+    if (!email && !password) {
+      setTimeout(() => {
+        setError(true)
+      }, 3000)
+    } else {
+      navigate('/users')
+    }
   }
 
   return (
@@ -30,32 +36,46 @@ function Login() {
         <div className='container2-body'>
           <div>
             <h1 className='welcome-text'>Welcome!</h1>
-            <p className='text'>Enter details to login.</p>
+            <p className='text' data-testid='enter-details'>
+              Enter details to login.
+            </p>
           </div>
           <div className='form-box'>
             <form className='form'>
               <div>
                 <input
-                  type='text'
+                  type='email'
                   placeholder='Email'
                   required
                   className='form-item'
+                  onChange={(e) => setEmail(e.target.value)}
                 />
               </div>
+
               <div className='input-container'>
                 <input
                   type='password'
                   placeholder='Password'
                   required
                   className='form-item-password'
+                  onChange={(e) => setPassword(e.target.value)}
                 />
               </div>
               <p className='forgot-password'>FORGOT PASSWORD?</p>
+              {error ? (
+                <p className='error' data-testid='error'>
+                  Something went wrong. Please, try again!
+                </p>
+              ) : (
+                ''
+              )}
               <div className='button-container'>
                 <button
                   type='submit'
                   className='form-item-button'
                   onClick={handleClick}
+                  role='button'
+                  disabled={!email && !password}
                 >
                   LOG IN
                 </button>

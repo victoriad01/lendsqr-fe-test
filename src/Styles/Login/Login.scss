@@ -208,6 +208,15 @@
   }
 }
 
+.error {
+  color: red;
+  @include mobile {
+  }
+
+  @include tablet {
+  }
+}
+
 .form-item-button {
   font-family: $font-family-2;
   font-size: $font-size-medium;

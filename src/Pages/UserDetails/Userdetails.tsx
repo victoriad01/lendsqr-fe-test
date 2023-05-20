@@ -5,7 +5,7 @@ import BackIcon from '../../assets/back arrow.svg'
 import ProfileIcon from '../../assets/userdp_icon.svg'
 import FullStarIcon from '../../assets/Full star.svg'
 import OutlineStarIcon from '../../assets/Outline star.svg'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate, useParams } from 'react-router-dom'
 import { GeneralComponent } from './Components/General'
 import axios from 'axios'
 
@@ -57,6 +57,8 @@ export interface UserdetailsInterface {
 const Userdetails = () => {
   const navigate = useNavigate()
 
+  const { id } = useParams()
+
   const [fetchedData, setFetchedData] = useState<UserdetailsInterface | null>(
     null
   )
@@ -68,7 +70,7 @@ const Userdetails = () => {
     try {
       // setLoading(true)
       const response = await axios.get(
-        'https://6270020422c706a0ae70b72c.mockapi.io/lendsqr/api/v1/users/10'
+        `https://6270020422c706a0ae70b72c.mockapi.io/lendsqr/api/v1/users/${id}`
       )
       const data = response?.data
       // Convert array of objects to a JSON string
@@ -85,7 +87,7 @@ const Userdetails = () => {
 
   useEffect(() => {
     response()
-  }, [])
+  })
 
   const [toggle, setToggle] = useState({
     general: true,
@@ -164,8 +166,12 @@ const Userdetails = () => {
   }
 
   return (
-    <div className='detail-container'>
-      <div className='back' onClick={() => navigate('/users')}>
+    <div className='detail-container' data-testid='load-details'>
+      <div
+        className='back'
+        onClick={() => navigate('/users')}
+        data-testid='back-cp'
+      >
         <img src={BackIcon} alt='back arrow' />
         <p>Back to Users</p>
       </div>
@@ -177,7 +183,7 @@ const Userdetails = () => {
         </div>
       </div>
 
-      <div className='third-block'>
+      <div className='third-block' data-testid='card-cp'>
         <div className='flex-the-items'>
           <div className='profile'>
             <img
@@ -240,7 +246,7 @@ const Userdetails = () => {
           </p>
         </div>
       </div>
-      <div>
+      <div data-testid='general'>
         {toggle.general ? <GeneralComponent fetchedData={fetchedData} /> : ''}
       </div>
     </div>

@@ -1,18 +1,15 @@
 import '../../Styles/Navbar/Navbar.scss'
+import { useAppSelector, useAppDispatch } from '../../../hooks'
+import { toggleTrue } from '../../../Slice/SidebarToggleSlice'
 
 import Logo from '../../assets/Group.svg'
 import SearchIcon from '../../assets/search_icon.svg'
 import Notification_Icon from '../../assets/Notification.svg'
-
 import Dp_Icon from '../../assets/image 4.png'
 import MenuIcon from '../../assets/menu.svg'
-// import { useSelector } from 'react-redux'
-
-import { useAppSelector, useAppDispatch } from '../../../hooks'
-import { toggleTrue } from '../../../Slice/SidebarToggleSlice'
 
 const users = [
-  { name: 'Victor', value: '0' },
+  { name: 'Adedeji', value: '0' },
   { name: 'Peace', value: '1' },
   { name: 'Joy', value: '2' },
 ]
