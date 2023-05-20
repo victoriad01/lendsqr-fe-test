@@ -50,9 +50,6 @@ function Login() {
                   className='form-item'
                   onChange={(e) => setEmail(e.target.value)}
                 />
-              </div>
-
-              <div className='input-container'>
                 <input
                   type='password'
                   placeholder='Password'
@@ -60,10 +57,10 @@ function Login() {
                   className='form-item-password'
                   onChange={(e) => setPassword(e.target.value)}
                 />
+
+                <p className='forgot-password'>FORGOT PASSWORD?</p>
               </div>
 
-              <div></div>
-              <p className='forgot-password'>FORGOT PASSWORD?</p>
               {error ? (
                 <p className='error' data-testid='error'>
                   Something went wrong. Please, try again!

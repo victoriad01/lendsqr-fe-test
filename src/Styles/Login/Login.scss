@@ -200,6 +200,10 @@
 .forgot-password {
   color: $primary-color-green;
   font-size: $font-size-light;
+  margin-top: 24px;
+
+  font-weight: 600;
+  text-align: left;
 
   @include mobile {
     text-align: left;
@@ -233,7 +237,7 @@
   cursor: pointer;
 
   @include mobile {
-    width: 80%;
+    width: 75%;
   }
 
   @include tablet {

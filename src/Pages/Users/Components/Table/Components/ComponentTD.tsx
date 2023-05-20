@@ -58,7 +58,11 @@ const ComponentTD = ({ user }: UsersList) => {
   }, [])
 
   return (
-    <tr className='table-detail' key={user.id}>
+    <tr
+      className='table-detail'
+      key={user.id}
+      onClick={() => navigate(`/users/${user.id}`)}
+    >
       <td className='table-detail'>{user.orgName}</td>
       <td className='table-detail'>{user.userName}</td>
       <td className='table-detail'>{user.email}</td>
