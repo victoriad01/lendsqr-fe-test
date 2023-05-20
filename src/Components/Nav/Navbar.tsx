@@ -39,7 +39,7 @@ const Navbar = () => {
           <img src={Dp_Icon} alt='Notification Icon' className='dp-image' />
           <select className='select-box'>
             {users.map((u, i) => (
-              <option value={u.value} key={i} className='select'>
+              <option value={u.value} key={i}>
                 {u.name}
               </option>
             ))}
@@ -53,7 +53,6 @@ const Navbar = () => {
             onClick={() => {
               dispatch(toggleTrue())
               console.log(stateCheck)
-              console.log('Clicked')
             }}
           />
         </div>

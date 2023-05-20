@@ -61,6 +61,8 @@ function Login() {
                   onChange={(e) => setPassword(e.target.value)}
                 />
               </div>
+
+              <div></div>
               <p className='forgot-password'>FORGOT PASSWORD?</p>
               {error ? (
                 <p className='error' data-testid='error'>
