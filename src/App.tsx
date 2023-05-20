@@ -1,5 +1,4 @@
 import './App.scss'
-import './index.css'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import Login from './Pages/Login/Login'
 import Users from './Pages/Users/Users'
